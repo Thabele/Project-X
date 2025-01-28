@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <title>About</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    background: linear-gradient(to right, #1d3557, #457b9d);
+    color: #fff;
+    padding: 50px 20px;
+    
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+   .heading h1 {
+    text-align: center;
+  }
+  /*.cta-button {
+    background: #ff5722;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+  }*/
+  
+  .cta-button:hover {
+    background: #e64a19;
+  }
+  .search-bar {
+    background: linear-gradient(to right, #1d3557, #457b9d);
+   /*color: #343a40; /* Neutral text color */
+    display: flex;
+    gap: 10px;
+    background-size: 200px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 3rem;
+    border: 1px solid #ccc;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  select.dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    display: inline;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  
+  .logo img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  /*Buttons*/
+
+  .dynamic-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff8c00, #ff4500);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    
+  }
+  .dynamic-button a{
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  .dynamic-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+  }
+
+  .dynamic-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+
+  .dynamic-button:hover::before {
+    opacity: 1;
+    top: 150%;
+    left: 150%;
+    transition: all 0.6s ease;
+  }
+  .headings.dynamic-button li a{
+    list-style: none;
+  }
+  .btn-links {
+   /* list-style: none;*/
+    display: flex;
+  }
+  /*.btn-links:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+  }*/
+
+  .btn{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+   /* background: linear-gradient(135deg, #ff8c00, #ff4500);*/
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /*background: rgba(255, 255, 255, 0.5);*/
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+  .btn:hover::before {
+    opacity: 1;
+    top: 150%;
+    left: 150%;
+    transition: all 0.6s ease;
+  }
+
+/*Overlay Button*/
+.overlay button:hover {
+    background: #f57c00;
+  }
+  .overlay2{
+   background: rgba(0, 0, 0, 0.5);
+   border-radius: 3rem;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: background 0.3s ease;
+  }
+  .overlay2 button h2 {
+    background: #ff9800;
+    border-radius: 5rem;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  .btn-links {
+    list-style: none;
+   
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+   li button{
+    background-color: #b3006e;
+    border-radius: 5rem;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+  }
+  .btn-links li {
+    margin-left: 20px;
+    
+  }
+  
+  .btn-links li a {
+    
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 5rem;
+  }
+  
+  .btn-links li a:hover {
+    color: whitesmoke;
+    
+  }
+  .buttons{
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .buttons h2{
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <header>
+   
+    <nav>
+        <div class="logo">
+          <img src="/images25/logo.jpeg" alt="Ecommerce Logo">
+          <h1>Laser Engraving Store</h1>
+        </div>
+        
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about.html">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shop">Shop</a></li>
+          <li><a href="new">What`s New?</a></li>
+          
+        </ul>
+      </nav>
+    <div class="hero-section">
+      <h1>Your Personal Touch, Our Expertise</h1>
+      <h3>Discover premium engravings, custom designs, and timeless gifts.</h3>
+       <button class="dynamic-button"><a href="engrave.html">Order Now</a></button>
+      
+    </div>
+    
+
+  </header>
+ <!-- Hero Section -->
+ <section class="hero-slider">
+  <div class="slider">
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" class="icon facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="icon twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="icon instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="icon linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="icon whatsapp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+  </section>
+  <div class="search-bar">
+    <select class="dropdown">
+      <option value="all">ALL</option>
+      <option value="special-offers">Special Offers</option>
+      <option value="latest-products">Latest Products</option>
+      <option value="wood-engravings">Wood Engravings</option>
+      <option value="leather-engravings">Leather Engravings</option>
+      <option value="acrylic-engravings">Acrylic Engravings</option>
+      <option value="sublimations">Sublimations</option>
+      <option value="wine-boxes">Wine Boxes</option>
+      <option value="ear-rings">Ear Rings</option>
+      <option value="jewellery">Jewellery</option>
+      <option value="gift-boxes">Gift Boxes</option>
+    </select>
+    <input type="text" class="search-input" placeholder="Search for products...">
+    <button class="dynamic-button">Search</button>
+  </div>
+</body>
+</html>
